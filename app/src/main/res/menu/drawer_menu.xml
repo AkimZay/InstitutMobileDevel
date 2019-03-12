@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/addBook"
+            android:title="Доабавить книгу" />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/favBook"
+            android:title="Избранные книги" />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/infoBook"
+            android:title="Информация о выбранной книге" />
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/infoAuth"
+            android:title="Информация об авторе" />
+    </group>
+</menu>

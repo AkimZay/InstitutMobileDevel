@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Lab2</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Преступление и наказание</string>
+    <string name="genre">Роман</string>
+    <string name="autor">Достоевский Ф.М.</string>
+    <string name="v0_1_betta">Version 0.3.1</string>
+    <string name="authorName">Zaytsev A.A.</string>
+    <string name="projectName">Bookish</string>
+    <string-array name="recycler_data">
+        <item>My string 1</item>
+        <item>My string 2</item>
+        <item>My 3asd</item>
+        <item>My string 4</item>
+        <item>My string 5asdasldkasfasfasfnasfa</item>
+        <item>My string 6</item>
+        <item>My string 7asfas</item>
+        <item>My string 8as</item>
+        <item>My  9</item>
+        <item>My string 10</item>
+        <item>My string 11</item>
+        <item>My asdsamfamsfmasmf 12</item>
+        <item>My string 13</item>
+        <item>My string 14</item>
+        <item>My string 15</item>
+        <item>My string 16</item>
+        <item>My string 17</item>
+        <item>My  18</item>
+        <item>My string 19</item>
+        <item>My string 20</item>
+        <item>My string 21azxc</item>
+        <item>My 22</item>
+        <item>My string 23</item>
+        <item>My string 24</item>
+        <item>My string 25asdasdas</item>
+    </string-array>
+</resources>
