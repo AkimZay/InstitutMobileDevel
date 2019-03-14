@@ -36,4 +36,7 @@
         <item>My string 24</item>
         <item>My string 25asdasdas</item>
     </string-array>
+    <string-array name="recycler_fav_data">
+        <item>Нет данных</item>
+    </string-array>
 </resources>

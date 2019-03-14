@@ -30,6 +30,5 @@ public class MainActivity extends AppCompatActivity {
         btnGo = (Button) findViewById(R.id.btnGo);
         etUser = (EditText) findViewById(R.id.etUser);
         etPassword = (EditText) findViewById(R.id.etPassword);
-
     }
 }
