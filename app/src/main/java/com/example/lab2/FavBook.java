@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import java.util.Arrays;
 import java.util.List;
 
-public class FavBook extends Fragment {
+public class FavBook extends android.app.Fragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager  mLayoutManager;
     private RecyclerView.Adapter mAdapter;
@@ -20,7 +20,7 @@ public class FavBook extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_add_book, container, false);
 
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.my_recycler_view);
+        mRecyclerView = view.findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(view.getContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
@@ -28,7 +28,7 @@ public class FavBook extends Fragment {
         String[] myString = getResources().getStringArray(R.array.recycler_fav_data);
         List<String> recyclerData = Arrays.asList(myString);
 
-        mAdapter = new AddBookRecyclerViewAdapter(recyclerData);
+        mAdapter = new FavBookRecyclerViewAdapter(recyclerData);
 
         mRecyclerView.setAdapter(mAdapter);
 

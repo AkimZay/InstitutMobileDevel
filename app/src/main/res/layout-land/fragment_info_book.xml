@@ -31,12 +31,11 @@
                 android:textAlignment="center" />
 
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/title"
-                android:textAlignment="center"
-                />
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/genre"
@@ -45,6 +44,13 @@
                 android:text="@string/genre"
                 android:textAlignment="center"
                 />
+
+            <TextView
+                android:id="@+id/publish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1875"
+                android:textAlignment="center" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

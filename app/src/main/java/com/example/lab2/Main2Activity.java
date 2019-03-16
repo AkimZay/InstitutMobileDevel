@@ -54,48 +54,53 @@ public class Main2Activity extends AppCompatActivity {
 
         FavBook fragment = new FavBook();
         if (savedInstanceState == null) {
-            getSupportFragmentManager()
-                    .beginTransaction()
+            getFragmentManager().beginTransaction()
                     .replace(R.id.content_frame, fragment)
+                    .addToBackStack(null)
                     .commit();
         }
 
         mDrawerLayout = findViewById(R.id.drawer_layout);
 
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        final NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setCheckedItem(R.id.favBook);
         navigationView.setNavigationItemSelectedListener(menuItem -> {
             switch (menuItem.getItemId()) {
                 case R.id.addBook:
+                    mDrawerLayout.closeDrawers();
                     AddBook addBook = new AddBook();
-                    Main2Activity.this.getSupportFragmentManager()
-                            .beginTransaction()
+                    getFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, addBook)
                             .addToBackStack(null)
                             .commit();
+                    navigationView.setCheckedItem(R.id.addBook);
                     break;
                 case R.id.favBook:
+                    mDrawerLayout.closeDrawers();
                     FavBook favBook = new FavBook();
-                    Main2Activity.this.getSupportFragmentManager()
-                            .beginTransaction()
+                    getFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, favBook)
                             .addToBackStack(null)
                             .commit();
+                    navigationView.setCheckedItem(R.id.favBook);
                     break;
                 case R.id.infoBook:
+                    mDrawerLayout.closeDrawers();
                     InfoBook infoBook = new InfoBook();
-                    Main2Activity.this.getSupportFragmentManager()
-                            .beginTransaction()
+                    getFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, infoBook)
                             .addToBackStack(null)
                             .commit();
+                    navigationView.setCheckedItem(R.id.infoBook);
                     break;
                 case R.id.infoAuth:
+                    mDrawerLayout.closeDrawers();
                     InfoAuth infoAuth = new InfoAuth();
-                    Main2Activity.this.getSupportFragmentManager()
-                            .beginTransaction()
+                    getFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, infoAuth)
                             .addToBackStack(null)
                             .commit();
+                    navigationView.setCheckedItem(R.id.infoAuth);
                     break;
             }
             menuItem.setChecked(true);
