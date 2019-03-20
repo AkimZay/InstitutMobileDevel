@@ -39,24 +39,9 @@ public class AddBook extends android.app.Fragment {
         mLayoutManager = new LinearLayoutManager(view.getContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-//        String[] myString = getResources().getStringArray(R.array.recycler_data);
-//        List<String> recyclerData = Arrays.asList(myString);
-
         recyclerData = new ArrayList<>();
 
         mySwipeRefreshLayout = view.findViewById(R.id.mySwipeRefreshLayout);
-
-//        mySwipeRefreshLayout.setOnRefreshListener((new SwipeRefreshLayout.OnRefreshListener() {
-//            @Override
-//            public void onRefresh() {
-//                mySwipeRefreshLayout.setRefreshing(false);
-//                Collections.shuffle(recyclerData);
-//
-//                mAdapter = new AddBookRecyclerViewAdapter(recyclerData);
-//                mRecyclerView.setAdapter(mAdapter);
-//            }
-//        }));
-
 
         mySwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override

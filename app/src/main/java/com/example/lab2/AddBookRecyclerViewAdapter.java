@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Collections;
@@ -19,11 +20,19 @@ public class AddBookRecyclerViewAdapter extends RecyclerView.Adapter<AddBookRecy
     private List<Book> mDataset;
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView mTextView;
+        public TextView tvAuthor;
+        public TextView tvName;
+        public TextView tvDate;
+
+        public LinearLayout bookLayout;
 
         public MyViewHolder(View v) {
             super(v);
-            mTextView = v.findViewById(R.id.my_text_view);
+            bookLayout = v.findViewById(R.id.bookLayout);
+
+            tvAuthor = v.findViewById(R.id.tvAuthor);
+            tvName = v.findViewById(R.id.tvName);
+            tvDate = v.findViewById(R.id.tvPublishDate);
         }
     }
 
@@ -42,9 +51,11 @@ public class AddBookRecyclerViewAdapter extends RecyclerView.Adapter<AddBookRecy
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.mTextView.setText(mDataset.get(position).getName());
+        holder.tvAuthor.setText(mDataset.get(position).getAuthor());
+        holder.tvName.setText(mDataset.get(position).getName());
+        holder.tvDate.setText(mDataset.get(position).getPublicationDate());
 
-        holder.mTextView.setOnClickListener(new View.OnClickListener() {
+        holder.bookLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 InfoBook infoBook = new InfoBook();
